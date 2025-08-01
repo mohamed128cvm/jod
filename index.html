@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدرانك ديزاين - ورق حائط فاخر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* تصميم الهيدر */
+        header {
+            background: linear-gradient(135deg, #1a365d, #2c5282);
+            color: white;
+            padding: 1rem 5%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text span {
+            color: #ffd166;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: #ffd166;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #ffd166;
+        }
+        
+        nav a:hover:after, nav a.active:after {
+            width: 80%;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .social-header {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-header a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-header a:hover {
+            background: #ffd166;
+            color: #1a365d;
+            transform: translateY(-3px);
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .phone-link:hover {
+            background: #ffd166;
+            color: #1a365d;
+            transform: translateY(-2px);
+        }
+        
+        /* قسم الهيرو */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.92)), url('https://images.unsplash.com/photo-1622372738946-62e02505feb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 5% 6rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .design-offer {
+            background: rgba(255, 209, 102, 0.2);
+            border: 2px dashed #ffd166;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .design-offer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffd166;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .design-offer p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffd166;
+            color: #1a365d;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+            margin: 20px 10px;
+            border: 2px solid transparent;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+            background: #1a365d;
+            color: #ffd166;
+            border-color: #ffd166;
+        }
+        
+        .cta-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .cta-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+        }
+        
+        /* قسم الفئات */
+        .categories {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: #ffd166;
+            border-radius: 5px;
+        }
+        
+        .section-header p {
+            color: #7a7a7a;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+        }
+        
+        .category-image {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s ease;
+        }
+        
+        .category-card:hover .category-image img {
+            transform: scale(1.12);
+        }
+        
+        .category-info {
+            padding: 28px;
+            text-align: center;
+        }
+        
+        .category-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #1a365d;
+            font-weight: 800;
+        }
+        
+        .category-info p {
+            color: #7a7a7a;
+            margin-bottom: 22px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        /* قسم المنتجات المميزة */
+        .featured-products {
+            padding: 6rem 5%;
+            background: linear-gradient(to bottom, #f5f7fa, #e8f0f8);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            position: relative;
+            border: 1px solid #eaeaea;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            background: linear-gradient(to right, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 7px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+        
+        .quick-view {
+            position: absolute;
+            bottom: -45px;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.85);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            transition: all 0.5s;
+            opacity: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .product-card:hover .quick-view {
+            bottom: 0;
+            opacity: 1;
+        }
+        
+        .product-info {
+            padding: 28px;
+        }
+        
+        .product-title {
+            font-size: 1.45rem;
+            color: #1a365d;
+            margin-bottom: 10px;
+            font-weight: 800;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .product-description {
+            color: #7a7a7a;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            height: 70px;
+            overflow: hidden;
+            line-height: 1.7;
+        }
+        
+        .product-material {
+            background: #e8f4ff;
+            color: #1a365d;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            border-left: 4px solid #ffd166;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1a365d;
+            margin-bottom: 15px;
+            text-align: center;
+            background: #f8f9ff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px dashed #1a365d;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 18px;
+        }
+        
+        .whatsapp-button {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(to right, #128C7E, #25D366);
+        }
+        
+        /* قسم الخصائص */
+        .features {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #1a365d, #2c5282);
+            color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 45px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 35px 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            transition: all 0.4s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-box:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 3.8rem;
+            margin-bottom: 28px;
+            color: #ffd166;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .feature-title {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        
+        .feature-description {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* قسم التصميم حسب الطلب */
+        .custom-design {
+            padding: 6rem 5%;
+            background: white;
+        }
+        
+        .custom-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .custom-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .custom-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .custom-content h2 {
+            font-size: 2.8rem;
+            color: #1a365d;
+            margin-bottom: 25px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+        }
+        
+        .custom-content h2 span {
+            color: #ffd166;
+            display: block;
+        }
+        
+        .custom-content p {
+            color: #5a5a5a;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+        
+        .design-steps {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .design-step {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .step-number {
+            min-width: 50px;
+            height: 50px;
+            background: #ffd166;
+            color: #1a365d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(255, 209, 102, 0.4);
+        }
+        
+        .step-content h3 {
+            font-size: 1.5rem;
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+        
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: #0d1b2a;
+            color: #e0e0e0;
+            padding: 5rem 5% 2.5rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 45px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+        }
+        
+        .footer-logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .footer-logo-text span {
+            color: #ffd166;
+        }
+        
+        .founder-name {
+            color: #ffd166;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-about p {
+            margin-bottom: 28px;
+            line-height: 1.9;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 18px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: #ffd166;
+            color: #1a365d;
+            transform: translateY(-5px);
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 28px;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #ffd166;
+            border-radius: 4px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+        
+        .footer-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links a:hover {
+            color: #ffd166;
+            transform: translateX(8px);
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 22px;
+            font-size: 1.1rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 4rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.05rem;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        /* التجاوب مع الشاشات */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .custom-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .custom-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 5% 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .design-offer h3 {
+                font-size: 1.5rem;
+            }
+            
+            .design-offer p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.3rem;
+            }
+            
+            .header-actions {
+                margin-top: 20px;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .custom-content h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 15px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .custom-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .custom-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Jodrank Design Logo">
+                <div class="logo-text">جدرانك <span>ديزاين</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#header" class="active">الرئيسية</a></li>
+                    <li><a href="#featured-products">التصاميم</a></li>
+                    <li><a href="#custom-design">تصميم حسب الطلب</a></li>
+                    <li><a href="#features">عن الشركة</a></li>
+                    <li><a href="#footer">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="social-header">
+                    <a href="https://www.facebook.com/Jodrankdesign" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/201061066971" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <a href="tel:+201061066971" class="phone-link">
+                    <i class="fas fa-phone"></i> +20 106 106 6971
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الهيرو -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>روّاد طباعة ورق الحائط في مصر والشرق الأوسط</h1>
+            <p>بخبرة 15 عامًا في تقديم أفضل التصاميم الفنية، نقدم لكم تشكيلة واسعة من ورق الحائط بأعلى جودة، أفضل سعر، وأسرع خدمة مع شحن لجميع محافظات مصر والسعودية</p>
+            
+            <div class="design-offer">
+                <h3><i class="fas fa-gift"></i> خدمة تصميم مجانية</h3>
+                <p>تصميم على حسب ذوقك فقط! أرسل لنا فكرتك ونحولها لك إلى تصميم مميز وعصري بدون أي رسوم تصميم إضافية. تدفع فقط سعر البوستر</p>
+            </div>
+            
+            <div>
+                <a href="#featured-products" class="cta-button">تصفح التصاميم <i class="fas fa-arrow-left"></i></a>
+                <a href="https://wa.me/201061066971" class="cta-button cta-whatsapp">تصميم حسب الطلب <i class="fas fa-palette"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفئات -->
+    <section id="categories" class="categories">
+        <div class="section-header">
+            <h2>المجموعات الفنية</h2>
+            <p>اكتشف تشكيلتنا الواسعة من تصاميم ورق الحائط المناسبة لكل الأذواق والمساحات</p>
+        </div>
+        
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="تصاميم نباتية">
+                </div>
+                <div class="category-info">
+                    <h3>المجموعة النباتية</h3>
+                    <p>تصاميم مستوحاة من الطبيعة الخلابة، نباتات استوائية، أزهار متفتحة، وغابات خضراء لتجلب الحياة إلى جدرانك</p>
+                    <a href="#" class="cta-button">استكشاف المجموعة</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="تصاميم هندسية">
+                </div>
+                <div class="category-info">
+                    <h3>المجموعة الهندسية</h3>
+                    <p>تصاميم معاصرة بلمسات هندسية مبتكرة، خطوط متناغمة، أشكال متداخلة، وألوان جريئة للجدران العصرية</p>
+                    <a href="#" class="cta-button">استكشاف المجموعة</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="تصاميم كلاسيكية">
+                </div>
+                <div class="category-info">
+                    <h3>المجموعة الكلاسيكية</h3>
+                    <p>فخامة وجمال لا يضاهى، تصاميم مستوحاة من القصور الملكية والتراث الأصيل بلمسات ذهبية وفضية</p>
+                    <a href="#" class="cta-button">استكشاف المجموعة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المنتجات المميزة -->
+    <section id="featured-products" class="featured-products">
+        <div class="section-header">
+            <h2>أحدث التصاميم الفنية</h2>
+            <p>اكتشف مجموعة مختارة من أفضل تصاميم ورق الحائط لدينا</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- سيتم إنشاء 20 منتج ديناميكيًا باستخدام JavaScript -->
+        </div>
+    </section>
+
+    <!-- قسم التصميم حسب الطلب -->
+    <section id="custom-design" class="custom-design">
+        <div class="custom-container">
+            <div class="custom-image">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="تصميم حسب الطلب">
+            </div>
+            <div class="custom-content">
+                <h2>تصميم <span>حسب ذوقك الخاص</span></h2>
+                <p>هل لديك فكرة لتصميم فريد؟ نقدم لك خدمة التصميم المجانية! فقط أخبرنا بفكرتك وسيقوم فريقنا المبدع بتحويلها إلى تصميم مميز يناسب جدران منزلك أو مكتبك، بدون أي رسوم تصميم إضافية.</p>
+                
+                <div class="design-steps">
+                    <div class="design-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>أرسل فكرتك</h3>
+                            <p>شاركنا أفكارك، الألوان المفضلة، والتصميم الذي تتخيله عبر الواتساب</p>
+                        </div>
+                    </div>
+                    <div class="design-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>التصميم الأولي</h3>
+                            <p>سيصمم فريقنا نموذجاً أولياً ويعرضه عليك خلال 24-48 ساعة</p>
+                        </div>
+                    </div>
+                    <div class="design-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>التعديلات والموافقة</h3>
+                            <p>نقوم بالتعديلات حسب ملاحظاتك حتى تحصل على التصميم المثالي</p>
+                        </div>
+                    </div>
+                    <div class="design-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>الطباعة والتوصيل</h3>
+                            <p>بعد الموافقة، نقوم بطباعة التصميم وتوصيله لأي مكان في مصر أو السعودية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/201061066971" class="cta-button cta-whatsapp">ابدأ تصميمك الآن <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الميزات -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>لماذا تختار جدرانك ديزاين؟</h2>
+            <p>نحن نقدم حلولاً متكاملة لتزيين جدران منازلكم ومكاتبكم</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3 class="feature-title">جودة فائقة</h3>
+                <p class="feature-description">خامات ألمانية مستوردة بجودة عالمية، مقاومة للرطوبة والتمزق، وألوان ثابتة لا تتأثر بالضوء</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-truck-fast"></i>
+                </div>
+                <h3 class="feature-title">توصيل سريع</h3>
+                <p class="feature-description">شحن لجميع محافظات مصر خلال 24-48 ساعة، وللمملكة العربية السعودية خلال 3-5 أيام عمل</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <h3 class="feature-title">طباعة متطورة</h3>
+                <p class="feature-description">أحدث ماكينات الطباعة الديجيتال بدقة 1440 dpi، وألوان ثابتة تعكس أدق التفاصيل الفنية</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3 class="feature-title">أفضل سعر</h3>
+                <p class="feature-description">أسعار تنافسية مع خصومات تصل إلى 30% على الطلبات الكبيرة، وضمان استرجاع خلال 7 أيام</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Jodrank Design Logo">
+                    <div class="footer-logo-text">جدرانك <span>ديزاين</span></div>
+                </div>
+                <div class="footer-about">
+                    <p>رواد طباعة ورق الحائط في مصر والشرق الأوسط، نقدم حلولاً مبتكرة لتزيين جدران منزلك أو مكتبك بأعلى جودة وأفضل سعر وأسرع خدمة. خبرتنا تمتد لأكثر من 15 عاماً في هذا المجال.</p>
+                    <div class="founder-name">Mohamed Atef - المؤسس</div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Jodrankdesign" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/201061066971" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3 class="footer-title">روابط سريعة</h3>
+                <ul>
+                    <li><a href="#header"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="#features"><i class="fas fa-chevron-left"></i> عن الشركة</a></li>
+                    <li><a href="#featured-products"><i class="fas fa-chevron-left"></i> تصاميمنا</a></li>
+                    <li><a href="#custom-design"><i class="fas fa-chevron-left"></i> تصميم حسب الطلب</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3 class="footer-title">فروعنا</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> مصر: العاشر من رمضان C6</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> السعودية: الرياض</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> السعودية: جدة</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> مصر: القاهرة</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> مصر: الإسكندرية</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact-info">
+                <h3 class="footer-title">تواصل معنا</h3>
+                <p><i class="fas fa-map-marker-alt"></i> العاشر من رمضان C6، مصر</p>
+                <p><i class="fas fa-phone"></i> +20 106 106 6971</p>
+                <p><i class="fab fa-whatsapp"></i> +20 106 106 6971</p>
+                <p><i class="fas fa-envelope"></i> info@jodrank-design.com</p>
+                <p><i class="fas fa-clock"></i> الأحد - الخميس: 8 صباحاً - 6 مساءً</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; 2023 جدرانك ديزاين | تصميم وطباعة ورق حائط</p>
+            <p>خبرة 15 عاماً في تقديم أفضل حلول تزيين الجدران</p>
+        </div>
+    </footer>
+
+    <script>
+        // بيانات المنتجات (20 منتج)
+        const products = [
+            {
+                name: "غابات الزمرد",
+                description: "تصميم غابات طبيعية بألوان زمردية تمنح جدرانك شعوراً بالطبيعة والانتعاش. تصميم ثلاثي الأبعاد يعكس عمق الغابة الخضراء.",
+                image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "أنماط هندسية",
+                description: "تصميم هندسي معاصر بألوان محايدة تناسب المساحات الحديثة والمكاتب. خطوط متقاطعة وأشكال سداسية بتدرجات لونية متناغمة.",
+                image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "فخامة العصور",
+                description: "تصميم كلاسيكي بلمسات ذهبية يضفي على جدرانك فخامة وروعة لا مثيل لها. مستوحى من قصور الباروك الأوروبية.",
+                image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "سحر الصحراء",
+                description: "ألوان رملية دافئة مع خطوط ناعمة تذكرك بسحر الصحراء وهدوئها. تصميم هادئ يناسب غرف المعيشة وغرف النوم.",
+                image: "https://images.unsplash.com/photo-1622372738946-62e02505feb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "أمواج المحيط",
+                description: "تصميم يحاكي حركة الأمواج بألوان زرقاء عميقة تمنح غرفتك هدوء البحر. ظلال متدرجة تعكس انعكاسات ضوء الشمس على الماء.",
+                image: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "أوراق الذهب",
+                description: "لمسات ذهبية على خلفية سوداء أنيقة تخلق جوًا من الفخامة والأناقة. تصميم مميز لغرف الاستقبال والصالات.",
+                image: "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "حديقة الورود",
+                description: "تصميم زهري رومانسي يزين غرف النوم بلمسة أنثوية راقية. أزهار وردية وحمراء بتفاصيل واقعية ثلاثية الأبعاد.",
+                image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "خطوط معاصرة",
+                description: "خطوط هندسية متقاطعة بألوان جريئة تناسب غرف المعيشة والمكاتب. تصميم معاصر يعطي إحساساً بالاتساع والعمق.",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "سماء الليل",
+                description: "تصميم فلكي يصور النجوم والكواكب لغرف الأطفال وغرف النوم. خلفية سوداء مع توهجات نجمية واقعية.",
+                image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "ألوان مائية",
+                description: "انسيابية الألوان المائية بتدرجات فنية تعكس الذوق الرفيع. تصميم تجريدي بألوان ناعمة ومتداخلة.",
+                image: "https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "أشجار البامبو",
+                description: "تصميم استوائي بأشجار البامبو الخضراء لغرف الاسترخاء والسبا. ظلال خضراء متدرجة مع تفاصيل ناعمة.",
+                image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "فسيفساء أندلسية",
+                description: "زخارف إسلامية مستوحاة من الفن الأندلسي بلمسة عصرية. أنماط هندسية متكررة بألوان ترابية دافئة.",
+                image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "سحر المرجان",
+                description: "ألوان مرجانية دافئة مع تدرجات ناعمة لغرف المعيشة. تصميم حديث بألوان الباستيل الدافئة.",
+                image: "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "غابة الخريف",
+                description: "ألوان خريفية دافئة مع أوراق شجر متساقطة. ظلال برتقالية وذهبية وحمراء تعكس جمال فصل الخريف.",
+                image: "https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "مدينة المستقبل",
+                description: "مناظر حضرية حديثة بتصميمات مستقبلية للمكاتب وغرف الشباب. ناطحات سحاب متلألئة بألوان زرقاء وفضية.",
+                image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "زهور اللافندر",
+                description: "تصميم زهري بنفسجي مع أزهار اللافندر لغرف النوم. خلفية أرجوانية ناعمة مع تفاصيل زهرية واقعية.",
+                image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "خطوط معدنية",
+                description: "تصميم معاصر بخطوط معدنية لامعة على خلفية داكنة. تأثيرات معدنية ثلاثية الأبعاد تعكس الضوء.",
+                image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "صخور جليدية",
+                description: "تصميم يصور تشكيلات جليدية بألوان زرقاء وبيضاء. ظلال متدرجة تعكس برودة الجليد وصفاءه.",
+                image: "https://images.unsplash.com/photo-1512273222628-4daea6e55abb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "غروب الصحراء",
+                description: "ألوان غروب الشمس في الصحراء بتدرجات برتقالية وذهبية. خط أفق ممتد مع ظلال ساحرة.",
+                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                name: "غابة الصنوبر",
+                description: "تصميم غابات صنوبر خضراء داكنة لغرف الاستقبال. تفاصيل واقعية لأشجار الصنوبر الطويلة.",
+                image: "https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // إنشاء المنتجات ديناميكياً
+        document.addEventListener('DOMContentLoaded', function() {
+            const productsGrid = document.querySelector('.products-grid');
+            
+            products.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                
+                // إضافة شارة "الأكثر مبيعاً" للعناصر الأولى
+                const badge = index < 3 ? `<div class="product-badge">${index === 0 ? 'الأكثر مبيعاً' : index === 1 ? 'جديد' : 'الأفضل تقييماً'}</div>` : '';
+                
+                productCard.innerHTML = `
+                    ${badge}
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="quick-view">عرض سريع</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-material">
+                            <i class="fas fa-certificate"></i> خامة ألمانية مستوردة عالية الجودة
+                        </div>
+                        <div class="product-price">السعر بحسب المتر | تواصل للتفاصيل</div>
+                        <div class="product-meta">
+                            <a href="https://wa.me/201061066971" class="whatsapp-button" target="_blank">
+                                <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+            
+            // تفاعلية القائمة
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // تأثير التمرير للعناصر
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // تطبيق التأثير على العناصر
+            const animatedElements = document.querySelectorAll('.category-card, .product-card, .feature-box, .custom-image, .custom-content');
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(40px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+            
+            // تغيير لون الهيدر عند التمرير
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+                    header.style.background = 'linear-gradient(135deg, #152642, #254170)';
+                } else {
+                    header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                    header.style.background = 'linear-gradient(135deg, #1a365d, #2c5282)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
